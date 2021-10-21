@@ -62,8 +62,8 @@ namespace UsePotAndScroll
           && ObjectManager.Me.ManaPercentage <= UsePotAndScrollSettings.CurrentSettings.UseManaPotionPercent
           && hasmanapotion != 0)
       {
-        ItemsManager.UseItem((uint)HasManaPot());
-        Log("Using Potion " + ItemsManager.GetNameById(HasManaPot()));
+        ItemsManager.UseItem((uint)hasmanapotion);
+        Log("Using Potion " + ItemsManager.GetNameById(hasmanapotion));
         Thread.Sleep(Usefuls.Latency + 100);
       }
     }
@@ -82,8 +82,8 @@ namespace UsePotAndScroll
       {
         Interact.InteractGameObject(ObjectManager.Me.GetBaseAddress, false, false);
         Thread.Sleep(200);
-        ItemsManager.UseItem((uint)HasScroll());
-        Log("Using Scroll " + ItemsManager.GetNameById(HasScroll()));
+        ItemsManager.UseItem((uint)hasScroll);
+        Log("Using Scroll " + ItemsManager.GetNameById(hasScroll));
         Thread.Sleep(Usefuls.Latency + 100);
       }
     }
